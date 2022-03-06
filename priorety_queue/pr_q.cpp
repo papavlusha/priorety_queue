@@ -48,6 +48,7 @@ void pr_q::front_info() const{
         return false;
     }
     else {
+        size--;
         Node* a = first->next;
         if (first == last_h) {
             last_h = nullptr;
@@ -61,18 +62,8 @@ void pr_q::front_info() const{
     }
 }
 
- void pr_q::amount() const {
-     if (is_empty()) {
-         cout << "queue is empty\n";
-         return;
-     }
-     unsigned number = 0;
-     Node* now = first;
-     while (now) {
-         number++;
-         now = now->next;
-     }
-     std::cout << number;
+ unsigned pr_q::amount() const {
+     return size;
  }
 
 pr_q& pr_q::operator=(const pr_q& Q)
@@ -163,6 +154,7 @@ void pr_q::push(int _val, int _pri) {
         if (_pri > 3 || _pri < 1) {
             throw std::exception("not right priority");
         }
+        size++;
         if (is_empty()) {
             first = p;
             last = p;

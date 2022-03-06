@@ -8,7 +8,7 @@ public:
 	void print() const;
 	void front_info() const;
 	bool pop();
-	void amount() const;
+	unsigned amount() const;
 	pr_q& operator = (const pr_q&);
 	pr_q& operator = (pr_q&& other);
 	void swap(pr_q* one, pr_q* two) {

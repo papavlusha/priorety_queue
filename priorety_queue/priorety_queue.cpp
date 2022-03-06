@@ -83,8 +83,7 @@ int main() {
             second = elements;
             break;
         case 8:
-            elements.amount();
-            cout << "\n";
+            cout <<elements.amount()<< "\n";
             break;
         case 9:
             if (elements.is_empty()) {
